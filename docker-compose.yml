@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ./front
+    ports:
+      - "3000:80"
+      # Nginx는 80포트를 사용하므로 docker-compose파일에선 80포트 노출로 설정함
+    depends_on:
+      - backend
+
+  backend:
+    container_name: backend
+    build:
+      context: ./back
+    ports:
+      - "3333:3333"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+
+  db:
+    container_name: db
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: bigbro
+      MYSQL_USER: bigbro
+      MYSQL_PASSWORD: "Jogkdud123%"
+    ports:
+      - "3307:3306"
+      # 3306포트 에러나서 3307로 변경

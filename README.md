@@ -1,111 +1,51 @@
-# KOSCAR
----
-🚗 중고차 개인거래 사이트
 
-## 🖥️ 프로젝트 소개
----
-딜러를 거치지 않고 판매자와 구매자가 직접 거래할 수 있도록 도와주는 중고차 개인거래 플랫폼입니다. 
+## 프로젝트 소개
+<img src="https://github.com/CuteSeeun/Web-UsedCar/blob/main/UsedCar.png" alt="커버 이미지" width="950" />  
+
+딜러없이 쉽고 빠르게 중고차를 사고 파는 웹 사이트를 제작하였습니다.  
+원하는 차량을 검색할 수 있고 마음에 드는 차량을 찜하여 마이페이지에서 확인할 수 있습니다. 또한, 차량을 판매하는 게시글을 작성할 수 있습니다.  
+
+<details>
+  <summary>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="7" width="13" height="10" rx="2" ry="2"></rect>
+  <polygon points="16 7 22 11 22 13 16 17 16 7"></polygon>
+</svg>
+    중고차 직거래 사이트.mp4  :  이미지 클릭 -> 영상 시청 
+  </summary>
+
+  [![유튜브 미리보기 이미지](https://img.youtube.com/vi/QKTLIbQ3dWc/0.jpg)](https://www.youtube.com/watch?v=QKTLIbQ3dWc)
+</details>
+
 
 ## 개발 기간
----
-10.8 ~ 10.11 기획 / 요구사항 분석 데이터베이스 설계
-워크 플로우 및 화면 설계
-10.14 ~ 10.18 개발
-
-## 팀원 소개 및 역할 분담
----
-![팀원 소개](./readmeImg/team.png)
-
-## 사용 기술
----
-<table style="width: 100%; border-collapse: collapse;">
-  <tr>
-    <td style="width: 25%; vertical-align: top; padding: 10px; border: 1px solid #ddd;">
-      <h3 style="margin: 0; font-weight: bold;">1. Database</h3>
-      <ul style="list-style-type: none; padding: 0;">
-        <li style="margin-left:18%">MySQL</li>
-      </ul>
-    </td>
-    <td style="width: 25%; vertical-align: top; padding: 10px; border: 1px solid #ddd;">
-      <h3 style="margin: 0; font-weight: bold;">2. Backend</h3>
-      <ul style="list-style-type: none; padding: 0;">
-        <li  style="margin-left:18%">Node.js</li>
-        <li  style="margin-left:18%">Express.js</li>
-      </ul>
-    </td>
-    <td style="width: 25%; vertical-align: top; padding: 10px; border: 1px solid #ddd;">
-      <h3 style="margin: 0; font-weight: bold;">3. Frontend</h3>
-      <ul style="list-style-type: none; padding: 0;">
-        <li>HTML5, CSS3, JavaScript</li>
-        <li>React</li>
-        <li>Styled-components</li>
-        <li>Bootstrap</li>
-      </ul>
-    </td>
-    <td style="width: 25%; vertical-align: top; padding: 10px; border: 1px solid #ddd;">
-      <h3 style="margin: 0; font-weight: bold;">4. Tools</h3>
-      <ul style="list-style-type: none; padding: 0;">
-        <li>VS Code</li>
-        <li>MySQL Workbench</li>
-        <li>GitHub</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-## 데이터베이스 ERD(Entity-Relationship Diagram)
----
-![ERD](./readmeImg/ERD.png)
-<table style="width: 100%; border-collapse: collapse; text-align: center;">
-  <tr>
-    <td style="width: 25%; vertical-align: top; padding: 15px; border: 1px solid #ddd;">
-      <h3 style="margin: 10px 0; font-weight: bold;">1. user (사용자 정보)</h3>
-      <ul style="list-style-type: none; padding: 0;">
-        <li style="margin: 5px 0;">uNo (PK)</li>
-        <li style="margin: 5px 0;">name</li>
-        <li style="margin: 5px 0;">userid (Unique)</li>
-        <li style="margin: 5px 0;">passwd</li>
-        <li style="margin: 5px 0;">tel</li>
-        <li style="margin: 5px 0;">email</li>
-      </ul>
-    </td>
-    <td style="width: 25%; vertical-align: top; padding: 15px; border: 1px solid #ddd;">
-      <h3 style="margin: 10px 0; font-weight: bold;">2. car (차량 정보)</h3>
-      <ul style="list-style-type: none; padding: 0;">
-        <li style="margin: 5px 0;">cNo (PK)</li>
-        <li style="margin: 5px 0;">name</li>
-        <li style="margin: 5px 0;">brand</li>
-        <li style="margin: 5px 0;">year</li>
-        <li style="margin: 5px 0;">mileage</li>
-        <li style="margin: 5px 0;">fuelType</li>
-        <li style="margin: 5px 0;">price</li>
-        <li style="margin: 5px 0;">color</li>
-        <li style="margin: 5px 0;">image</li>
-        <li style="margin: 5px 0;">user_uNo (FK)</li>
-      </ul>
-    </td>
-    <td style="width: 25%; vertical-align: top; padding: 15px; border: 1px solid #ddd;">
-      <h3 style="margin: 10px 0; font-weight: bold;">3. board (게시글 정보)</h3>
-      <ul style="list-style-type: none; padding: 0;">
-        <li style="margin: 5px 0;">bNo (PK)</li>
-        <li style="margin: 5px 0;">sale</li>
-        <li style="margin: 5px 0;">date</li>
-        <li style="margin: 5px 0;">user_uNo (FK)</li>
-        <li style="margin: 5px 0;">car_cNo (FK)</li>
-      </ul>
-    </td>
-    <td style="width: 25%; vertical-align: top; padding: 15px; border: 1px solid #ddd;">
-      <h3 style="margin: 10px 0; font-weight: bold;">4. favorite (찜하기 정보)</h3>
-      <ul style="list-style-type: none; padding: 0;">
-        <li style="margin: 5px 0;">fNo (PK)</li>
-        <li style="margin: 5px 0;">favorite</li>
-        <li style="margin: 5px 0;">user_uNo (FK)</li>
-        <li style="margin: 5px 0;">car_cNo (FK)</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+- 2024.10.8 ~ 2024.10.11 : 기획/요구사항 분석, 데이터베이스 설계, 퍼블리싱   
+- 2024.10.14 ~ 2024.10.18 : 개발  
 
 
+## 팀원 소개
+- **[김정연](https://github.com/lakelover0611)** : 기획 담당  / 메인페이지
+- **[김현진](https://github.com/0515khj)** : 퍼블리싱 담당  /  메인페이지, 상세페이지, 수정페이지
+- **[조하영](https://github.com/bigbro5232)** : ERD 담당  /  로그인 및 회원가입
+- **[최세은](https://github.com/CuteSeeun)** : 퍼블리싱 담당  /  판매등록 페이지, 마이페이지
+
+페이지를 기준으로 프론트, 백엔드를 함께 구현하였습니다.  
 
 
+## 개발 환경
+- **Front-end** : React, Styled-components, BootStrap
+- **Back-end** : Node.js
+- **Database** : MySQL
+
+
+## 데이터베이스 설계
+- **DB 엔진** : MySQL 8.0
+- **주요 테이블**
+<img src="https://github.com/CuteSeeun/Web-UsedCar/blob/main/table.jpg" alt="데이터베이스 테이블" width="400" />
+
+## 페이지별 주요 기능
+- **로그인/회원가입** : 세션을 활용한 로그인, 로그인에 따른 활성화 기능
+- **메인 페이지** : 검색, 필터링, 목록, 페이지네이션, 좋아요 기능
+- **상세 페이지** : 차량 상세 정보, 판매자 정보 
+- **수정 페이지** : 상세 정보 수정 및 삭제
+- **마이 페이지** : 찜 목록, 판매 목록, 회원정보 수정

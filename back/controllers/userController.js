@@ -1,6 +1,6 @@
 // userController.js
 const pool = require('../config/dbpools');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const saveUser = async (req, res) => {
     const { name, userid, passwd, tel, email } = req.body;
