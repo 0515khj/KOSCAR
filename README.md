@@ -5,17 +5,6 @@
 딜러없이 쉽고 빠르게 중고차를 사고 파는 웹 사이트를 제작하였습니다.  
 원하는 차량을 검색할 수 있고 마음에 드는 차량을 찜하여 마이페이지에서 확인할 수 있습니다. 또한, 차량을 판매하는 게시글을 작성할 수 있습니다.  
 
-<details>
-  <summary>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="3" y="7" width="13" height="10" rx="2" ry="2"></rect>
-  <polygon points="16 7 22 11 22 13 16 17 16 7"></polygon>
-</svg>
-    중고차 직거래 사이트.mp4  :  이미지 클릭 -> 영상 시청 
-  </summary>
-
-  [![유튜브 미리보기 이미지](https://img.youtube.com/vi/QKTLIbQ3dWc/0.jpg)](https://www.youtube.com/watch?v=QKTLIbQ3dWc)
-</details>
 
 
 ## 개발 기간
